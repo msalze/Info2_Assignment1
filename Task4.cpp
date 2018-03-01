@@ -10,7 +10,7 @@ int compare(char a, char b){
 	if (a==b){
 		return 0;
 	}
-	if ((a-32 == b && a>91)|| (b-32==a && b>91)) {
+	if ((a>91 && a-32 == b)|| (b>91 && b-32==a)) {
 		if (a>b){
 			return 1;
 		}
@@ -42,7 +42,6 @@ void bubblesort(char a[], int n){
 }
 
 
-/*
 int isAnagram(char a[], char b[]){
 	int lena = strlen(a);
 	int lenb = strlen(b);
@@ -61,7 +60,7 @@ int isAnagram(char a[], char b[]){
 	}
 	return 1;
 }
-*/
+
 
 int main(){
 	char a[100];
@@ -73,7 +72,7 @@ int main(){
 		
 	
 	printf("Sorted String: %s\n", a);
-	/*
+	
 	printf("\nEnter the first string: ");
     char b1[100];
     scanf("%s", b1);
@@ -91,7 +90,7 @@ int main(){
 	printf("Is Anagram : False\n");
     }
 
-    return 0;*/
+    return 0;
 }
 
 
